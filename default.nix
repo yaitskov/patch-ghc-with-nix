@@ -8,7 +8,9 @@ pkgs.stdenv.mkDerivation rec {
 
   src = ./.;
 
-  myGhc = pkgs.haskellPackages.ghc;
+  myGhc = pkgs.haskellPackages.ghc.overrideAttrs (oldAttrs: rec {
+    patches = oldAttrs.patches ++ [ ./trace-linker14.patch ];
+  });
 
   buildInputs = [
     myGhc
