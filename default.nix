@@ -11,11 +11,7 @@ pkgs.stdenv.mkDerivation rec {
   myGhc = pkgs.haskellPackages.ghc;
 
   buildInputs = [
-    # pkgs.simgrid
-    # pkgs.boost
-    # pkgs.cmake
     myGhc
-    # pkgs.ghc
   ];
 
   configurePhase = ''
