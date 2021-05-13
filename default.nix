@@ -22,7 +22,7 @@ pkgs.stdenv.mkDerivation rec {
   '';
 
   buildPhase = ''
-    ghc -o main HelloWorld.hs
+    ghc -o main HelloWorld.hs -package ghc
   '';
 
   installPhase = ''
