@@ -6,11 +6,6 @@ pkgs.stdenv.mkDerivation rec {
   pname = "chord";
   version = "0.1.0";
 
-  # rev = "cbe903e7f8839794fbe572ea4c811e2c802a4038";
-  # src = pkgs.fetchurl {
-  #   url = "https://gitlab.inria.fr/nix-tutorial/chord-tuto-nix-2019/-/archive/${rev}/chord-tuto-nix-2019-${rev}.tar.gz";
-  #   sha256 = "1d75ad63llkcgs2y44fsfismg0n6srlzx3n8fy9v07550jnhwh1c";
-  # };
   src = ./.;
 
   myGhc = pkgs.haskellPackages.ghc;
